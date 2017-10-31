@@ -1,0 +1,6 @@
+.vs/
+AngularWebpackTraining/node_modules/
+packages/
+AngularWebpackTraining/obj/
+AngularWebpackTraining/bin/
+*.user
