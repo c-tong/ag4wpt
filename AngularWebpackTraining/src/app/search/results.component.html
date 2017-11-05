@@ -1,0 +1,3 @@
+﻿<p-dataTable [value]="transactionSearchResults" [rows]="rows" [paginator]="true" [pageLinks]="pageLinks" [rowsPerPageOptions]="rowsPerPageOptions">
+    <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header" [sortable]="true"></p-column>
+</p-dataTable>

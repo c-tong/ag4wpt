@@ -6,9 +6,8 @@ using System.Web.Mvc;
 
 namespace AngularWebpackTraining.Controllers
 {
-    public class HomeController : Controller
+    public class SearchController : Controller
     {
-        // GET: Home
         public ActionResult Index()
         {
             return View();

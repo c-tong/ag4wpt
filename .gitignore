@@ -4,3 +4,4 @@ packages/
 AngularWebpackTraining/obj/
 AngularWebpackTraining/bin/
 *.user
+AngularWebpackTraining/dist/
