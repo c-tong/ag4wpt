@@ -1,1 +1,26 @@
 ﻿
+<p-sidebar [(visible)]="display" styleClass="ui-sidebar-left ui-sidebar-md" [blockScroll]="true">
+    <div>
+        <div>
+            <p>
+                <label>Client Name Promise</label> <p-autoComplete [(ngModel)]="clientsPromise" [suggestions]="filteredCountriesMultiple" (completeMethod)="filterCountryMultiple($event)" styleClass="wid100"
+                                                           [minLength]="1" placeholder="Client Name" field="name" [multiple]="true">
+                </p-autoComplete>
+        </div>
+        <div>
+            <p>
+                <label>Client Name Observable</label> <p-autoComplete [(ngModel)]="clientsObservable" [suggestions]="results" (completeMethod)="searchClients($event)" styleClass="wid100"
+                                                           [minLength]="1" placeholder="Client Name" field="name" [multiple]="true">
+                </p-autoComplete>
+        </div>
+        <div>
+            <button pButton type="button" (click)="search()" label="Search"></button>
+            <button pButton type="button" (click)="customize()" label="Customize" class="ui-button-warning"></button>
+
+        </div>
+    </div>
+</p-sidebar>
+
+
+
+<button type="button" (click)="display = true" pButton icon="fa-external-link-square" label="Show"></button>
