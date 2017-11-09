@@ -157,6 +157,7 @@
     <TypeScriptCompile Include="src\app\search\search.component.ts" />
     <TypeScriptCompile Include="src\app\search\sidebar.component.ts" />
     <TypeScriptCompile Include="src\app\services\referential.service.ts" />
+    <TypeScriptCompile Include="src\app\services\shared.service.ts" />
     <TypeScriptCompile Include="src\app\services\transaction-search.service.ts" />
     <TypeScriptCompile Include="src\app\transaction-search.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
