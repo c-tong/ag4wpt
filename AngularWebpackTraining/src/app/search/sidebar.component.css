@@ -1,0 +1,75 @@
+﻿
+.search {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    border: dashed;
+    padding: 5px;
+    width: 2%;
+    height: 2%;
+    background-color: cornsilk;
+}
+
+.bookmark {
+    position: absolute;
+    z-index: 3;
+    top: 54%;
+    border: dashed;
+    padding: 5px;
+    width: 2%;
+    height: 2%;
+    background-color: cornsilk;
+}
+
+.left {
+    z-index: 1;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    bottom: 0;
+    left: -500px;
+    margin-top: 0px;
+    width: 250px;
+    height: 50%;
+    background-color: antiquewhite;
+    -webkit-transition: 600ms ease-in-out;
+    -moz-transition: 600ms ease-in-out;
+    -o-transition: 600ms ease-in-out;
+    transition: 600ms ease-in-out;
+}
+
+.right {
+    z-index: 0;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    bottom: 0;
+    left: -500px;
+    margin-top: 0px;
+    width: 250px;
+    height: 50%;
+    background-color: brown;
+    -webkit-transition: 600ms ease-in-out;
+    -moz-transition: 600ms ease-in-out;
+    -o-transition: 600ms ease-in-out;
+    transition: 600ms ease-in-out;
+}
+
+.translate {
+    left: 0;
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -o-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+    background: yellow;
+}
+
+.translateAdvanced {
+    -webkit-transform: translateX(280px);
+    -moz-transform: translateX(280px);
+    -o-transform: translateX(280px);
+    -ms-transform: translateX(280px);
+    transform: translateX(280px);
+    background: red;
+}

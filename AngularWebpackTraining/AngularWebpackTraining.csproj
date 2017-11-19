@@ -109,7 +109,9 @@
     <Content Include="Scripts\app.bundle.js" />
     <Content Include="Scripts\polyfills.bundle.js" />
     <Content Include="src\app\search\results.component.html" />
+    <Content Include="src\app\search\search.component.css" />
     <Content Include="src\app\search\search.component.html" />
+    <Content Include="src\app\search\sidebar.component.css" />
     <Content Include="src\app\search\sidebar.component.html" />
     <Content Include="webpack.config.js" />
     <Content Include="Global.asax" />
@@ -125,6 +127,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Api\TransactionController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

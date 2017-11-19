@@ -1,7 +1,8 @@
-﻿var path = require("path");
+﻿var webpack = require("webpack");
+var path = require("path");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./config/helpers');
-
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
 
@@ -11,8 +12,8 @@ module.exports = {
     },
 
     output: {
-        path: __dirname,
-        filename: "./Scripts/[name].bundle.js"
+        filename: './Scripts/[name].bundle.js',
+        path: __dirname
     },
     resolve: {
         extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html', '.cshtml']
@@ -22,7 +23,7 @@ module.exports = {
         rules: [
           {
               test: /\.ts$/,
-              loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+              loaders: ['awesome-typescript-loader', 'angular-router-loader', 'angular2-template-loader']
           },
           {
               test: /\.html$/,
@@ -51,6 +52,17 @@ module.exports = {
     },
 
     plugins: [
-        new ExtractTextPlugin('./Content/style.css')
+        new ExtractTextPlugin('./Content/style.css'),
+        new webpack.optimize.AggressiveMergingPlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: { warnings: false },
+            comments: false,
+            sourceMap: false,
+            minimize: false
+        }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
+
+
+        //new BundleAnalyzerPlugin()
     ]
 };
